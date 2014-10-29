@@ -118,7 +118,7 @@ GameObject:
   - 114: {fileID: 101920523}
   m_Layer: 0
   m_Name: rightBackSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,6 +304,22 @@ Prefab:
       propertyPath: colorAnimation[1].rgba
       value: 1912544973
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
   m_RootGameObject: {fileID: 38094801}
@@ -352,7 +368,7 @@ GameObject:
   - 23: {fileID: 335156474}
   m_Layer: 0
   m_Name: Fan
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,6 +626,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &554891291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 554891292}
+  - 33: {fileID: 554891295}
+  - 23: {fileID: 554891293}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554891292
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554891291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 17.5640717, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children:
+  - {fileID: 606503217}
+  m_Father: {fileID: 1190350016}
+  m_RootOrder: 0
+--- !u!23 &554891293
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554891291}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: ac1383250a8944b4da25e7ba7a79e7e6, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &554891295
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554891291}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &571448131
 Prefab:
   m_ObjectHideFlags: 0
@@ -726,6 +799,81 @@ Prefab:
   m_RootGameObject: {fileID: 1655244651}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &606503215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 606503217}
+  - 108: {fileID: 606503216}
+  - 114: {fileID: 606503218}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &606503216
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606503215}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 0, g: .909803927, b: 1, a: 1}
+  m_Intensity: 5
+  m_Range: 34.2391701
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &606503217
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606503215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 554891292}
+  m_RootOrder: 0
+--- !u!114 &606503218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606503215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8053d960fd9cf2847be31105f62458ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &669927391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1523,7 @@ GameObject:
   - 114: {fileID: 968076075}
   m_Layer: 0
   m_Name: rightFrontSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1580,7 +1728,7 @@ GameObject:
   - 114: {fileID: 1064090037}
   m_Layer: 0
   m_Name: leftFrontSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1663,7 +1811,7 @@ GameObject:
   - 65: {fileID: 1067844104}
   m_Layer: 0
   m_Name: hover
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1775,6 +1923,62 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1 &1190350013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1190350016}
+  - 136: {fileID: 1190350015}
+  - 114: {fileID: 1190350014}
+  m_Layer: 0
+  m_Name: Energy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1190350014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190350013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b60632f77cc19e45a5ebc41b49b403d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 10
+  resetTime: 300
+--- !u!136 &1190350015
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190350013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 40
+  m_Direction: 1
+  m_Center: {x: 0, y: 20, z: 0}
+--- !u!4 &1190350016
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1190350013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2054.10059, y: .92506671, z: 329.099609}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 554891292}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1250037762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +2113,7 @@ GameObject:
   - 114: {fileID: 1281721166}
   m_Layer: 0
   m_Name: leftBackSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2458,7 +2662,7 @@ GameObject:
   - 114: {fileID: 1567346612}
   m_Layer: 0
   m_Name: leftBackSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2572,7 +2776,7 @@ GameObject:
   - 23: {fileID: 1674065860}
   m_Layer: 0
   m_Name: Fan
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2642,7 +2846,7 @@ GameObject:
   - 114: {fileID: 1683353363}
   m_Layer: 0
   m_Name: HovercraftTwo
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2705,6 +2909,7 @@ MonoBehaviour:
   target: {fileID: 1870063517}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
   player: Two
+  energyCost: 30
 --- !u!114 &1683353364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,6 +2923,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 50
   player: Two
+  energy: 0
+  maxEnergy: 100
 --- !u!1 &1697881019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,7 +2939,7 @@ GameObject:
   - 114: {fileID: 1697881021}
   m_Layer: 0
   m_Name: rightFrontSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2858,6 +3065,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e41678f0e9e7dd4db55e8395f35131a, type: 2}
+    - target: {fileID: 100000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
+      propertyPath: m_TagString
+      value: Hovercraft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
   m_RootGameObject: {fileID: 1806978446}
@@ -2875,7 +3094,7 @@ GameObject:
   - 65: {fileID: 1806978448}
   m_Layer: 0
   m_Name: hover
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2978,6 +3197,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e41678f0e9e7dd4db55e8395f35131a, type: 2}
+    - target: {fileID: 100002, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
+      propertyPath: m_TagString
+      value: Hovercraft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
   m_RootGameObject: {fileID: 1067844102}
@@ -3061,7 +3284,7 @@ GameObject:
   - 114: {fileID: 1870063519}
   m_Layer: 0
   m_Name: HovercraftOne
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3098,6 +3321,7 @@ MonoBehaviour:
   target: {fileID: 1683353359}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
   player: One
+  energyCost: 30
 --- !u!114 &1870063520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3111,6 +3335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 50
   player: One
+  energy: 0
+  maxEnergy: 100
 --- !u!75 &1870063521
 ConstantForce:
   m_ObjectHideFlags: 0
@@ -3244,6 +3470,22 @@ Prefab:
       propertyPath: colorAnimation[1].rgba
       value: 1912544973
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83908687df0003d4f8fe9c8af3b47bdb, type: 2}
   m_RootGameObject: {fileID: 297796873}
@@ -3263,7 +3505,7 @@ GameObject:
   - 114: {fileID: 1990984220}
   m_Layer: 0
   m_Name: leftFrontSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3348,7 +3590,7 @@ GameObject:
   - 114: {fileID: 2006111669}
   m_Layer: 0
   m_Name: rightBackSuspension
-  m_TagString: Untagged
+  m_TagString: Hovercraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

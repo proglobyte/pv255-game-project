@@ -8,11 +8,19 @@ public class SimpleHovercraft : MonoBehaviour {
 	public string player;
 	private float nextReset = 0.0f;
 	private float resetFrequency = 0.5f;
+	public int energy = 0;
+	public int maxEnergy = 100;
 	
 	void Start () {
 		fan = transform.Find("Fan");
 	}
-	
+
+	public void AddEnergy(int energy) {
+		this.energy += energy;
+		if (this.energy > this.maxEnergy)
+			this.energy = this.maxEnergy;
+	}
+
 	void FixedUpdate () {
 		
 		float r = Input.GetAxis("Horizontal"+player) * -10;
