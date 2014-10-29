@@ -6,6 +6,8 @@ TagManager:
   - Boundary
   - Hovercraft
   - Enemy
+  - One
+  - Two
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
