@@ -625,8 +625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &554891291
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,9 +683,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 554891291}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-=======
-  m_RootOrder: 3
->>>>>>> origin/master
 --- !u!1001 &571448131
 Prefab:
   m_ObjectHideFlags: 0
@@ -2909,7 +2905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1567346610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,10 +3183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 50
   player: Two
-<<<<<<< HEAD
   energy: 0
   maxEnergy: 100
-=======
 --- !u!114 &1683353365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3218,7 +3212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: Two
   timeout: 5
->>>>>>> origin/master
 --- !u!1 &1697881019
 GameObject:
   m_ObjectHideFlags: 0
