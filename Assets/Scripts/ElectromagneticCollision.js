@@ -15,10 +15,7 @@ function initialize(){
 
 function OnTriggerEnter (col : Collider)
 {
-  print(this.name + ": HIT! (collider)");
-  print("Collider object name: " + col.gameObject.tag);
-  
-  if(col.gameObject.tag != player && !disabled){
+  if(col.gameObject.tag != player && col.gameObject.name == "em_sphere" && !disabled){
   	initialize();
   	script = GetComponent(SimpleHovercraft);
   	power = script.power;
