@@ -10,7 +10,7 @@ public class Speeder : MonoBehaviour {
 		if (other.tag.Equals("Speeder"))
 		{
 			var rb = this.GetComponentInParent<Rigidbody>();
-			rb.AddForce(this.transform.forward * force);
+			rb.AddForce(other.transform.forward * force);
 		}
 	}
 }

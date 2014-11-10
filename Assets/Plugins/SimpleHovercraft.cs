@@ -10,9 +10,14 @@ public class SimpleHovercraft : MonoBehaviour {
 	private float resetFrequency = 0.5f;
 	public int energy = 0;
 	public int maxEnergy = 100;
+	public float speed;
+	private const float speedConstant = 8;
+
+	private Vector3 lastPosition;
 	
 	void Start () {
 		fan = transform.Find("Fan");
+		lastPosition = this.transform.position;
 	}
 
 	public void AddEnergy(int energy) {
@@ -30,12 +35,12 @@ public class SimpleHovercraft : MonoBehaviour {
 		float force = Input.GetAxis("Vertical"+player) * power;
 		
 		rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
-		
-		//Camera.main.transform.LookAt(transform);
+
+		this.speed = Vector3.Distance (lastPosition, this.transform.position) * speedConstant;
+		lastPosition = this.transform.position;
 	}
 
 	void Update() {
-
 		if (Input.GetButton ("Reset"+player) && Time.time > nextReset ) {
 			nextReset = Time.time + resetFrequency;
 			var pos = this.transform.position;
