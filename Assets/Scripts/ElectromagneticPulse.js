@@ -1,9 +1,5 @@
 ﻿#pragma strict
 
-function Start () {
-
-}
-
 private var destroyTimeLeft : float;
 private var fadeTimeLeft : float;
 private var destroyCountdown = false;
@@ -11,10 +7,15 @@ private var fadeCountdown = false;
 private var scaleFactor : float;
 private var fadeFactor : float;
 private var sphere : GameObject;
+private var player : Player;
 
 var speed : float = 20;
 var radius : float = 5;
-var player : String;
+var requiredEnergy : int = 5;
+
+function Start () {
+  player = GetComponent(Player);
+}
 
 function initialize(){
   destroyTimeLeft = 1000;
@@ -50,25 +51,26 @@ function Update () {
     }
   }
 
-  if (Input.GetButton ("Player" + player + "_Weapon3")){
-    print ("player " + player + " is using electromagnetic pulse");
-    if (transform.Find("em_sphere") == null ){
-    	initialize();
-	    sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-	    sphere.transform.parent = this.transform;
-	    sphere.name = "em_sphere";
-	    sphere.tag = player;
-	    var collider : SphereCollider;
-	    collider = sphere.GetComponent("SphereCollider");
-	    collider.isTrigger = true;
-	    var rigidbody : Rigidbody;
-	    rigidbody = sphere.AddComponent("Rigidbody");
-	    rigidbody.useGravity = false;
-	    sphere.transform.position = this.transform.position;
-	    sphere.renderer.material = Resources.Load("m_Lighting", Material);
-	    scaleFactor = radius/(destroyTimeLeft/speed);
-	    fadeFactor = sphere.renderer.material.color.a/(fadeTimeLeft/speed);
-	    destroyCountdown = true;
+  if (Input.GetButton("Player" + player.id + "_Weapon3")){
+    print ("player " + player.id + " is using electromagnetic pulse");
+    if (transform.Find("em_sphere") == null && player.energy >= requiredEnergy){
+      initialize();
+      sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+      sphere.transform.parent = this.transform;
+      sphere.name = "em_sphere";
+      sphere.tag = player.id;
+      var collider : SphereCollider;
+      collider = sphere.GetComponent("SphereCollider");
+      collider.isTrigger = true;
+      var rigidbody : Rigidbody;
+      rigidbody = sphere.AddComponent("Rigidbody");
+      rigidbody.useGravity = false;
+      sphere.transform.position = this.transform.position;
+      sphere.renderer.material = Resources.Load("m_Lighting", Material);
+      scaleFactor = radius/(destroyTimeLeft/speed);
+      fadeFactor = sphere.renderer.material.color.a/(fadeTimeLeft/speed);
+      destroyCountdown = true;
+      player.energy -= requiredEnergy;
     }
   }
 }

@@ -15,6 +15,7 @@ public class Energy : MonoBehaviour {
 	{
 		if (other.gameObject.tag.Equals ("Hovercraft")) {
 			(other.transform.parent.gameObject.GetComponent("SimpleHovercraft") as SimpleHovercraft).AddEnergy(this.energy);
+                        (other.transform.parent.gameObject.GetComponent("Player") as Player).energy += energy;
 		}
 		(this.transform.Find("Visual")).gameObject.SetActive(false);
 		(this.GetComponent("Collider") as Collider).enabled = true;
