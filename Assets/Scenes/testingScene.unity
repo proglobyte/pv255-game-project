@@ -1218,19 +1218,22 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672542842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 
+  energyCost: 0
   bd: {fileID: 0}
+  avaible: 0
 --- !u!120 &672542847
 LineRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 672542842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
@@ -2513,7 +2516,7 @@ Transform:
   m_PrefabInternal: {fileID: 1750027942}
   m_GameObject: {fileID: 1220317273}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2931.31982, y: -123.209259, z: 2567.37329}
+  m_LocalPosition: {x: 4769.89307, y: -123.209259, z: -1809.51367}
   m_LocalScale: {x: .0799999982, y: .0799999982, z: .0799999982}
   m_Children:
   - {fileID: 691128133}
@@ -3596,6 +3599,8 @@ GameObject:
   - 114: {fileID: 1683353366}
   - 114: {fileID: 1683353367}
   - 114: {fileID: 1683353368}
+  - 120: {fileID: 1683353370}
+  - 114: {fileID: 1683353369}
   m_Layer: 0
   m_Name: HovercraftTwo
   m_TagString: Hovercraft
@@ -3732,6 +3737,54 @@ MonoBehaviour:
   energy: 0
   lap: 0
   checkpoint: 0
+--- !u!114 &1683353369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683353359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: Two
+  energyCost: 1
+  bd: {fileID: 0}
+  avaible: 0
+--- !u!120 &1683353370
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683353359}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 0
 --- !u!1 &1697881019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3884,6 +3937,10 @@ Prefab:
       propertyPath: m_TagString
       value: Hovercraft
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
   m_RootGameObject: {fileID: 1806978446}
@@ -3898,7 +3955,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b42c506ab3b211c47b39f37bc71230bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2931.31982
+      value: 4769.89307
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b42c506ab3b211c47b39f37bc71230bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3906,7 +3963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b42c506ab3b211c47b39f37bc71230bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2567.37329
+      value: -1809.51367
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b42c506ab3b211c47b39f37bc71230bb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4149,6 +4206,9 @@ GameObject:
   - 114: {fileID: 1870063524}
   - 114: {fileID: 1870063525}
   - 114: {fileID: 1870063526}
+  - 23: {fileID: 1870063529}
+  - 120: {fileID: 1870063527}
+  - 114: {fileID: 1870063528}
   m_Layer: 0
   m_Name: HovercraftOne
   m_TagString: Hovercraft
@@ -4163,7 +4223,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870063517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4066.26172, y: 73.4583206, z: 2107.20972}
+  m_LocalPosition: {x: 1900.16333, y: 13.1696558, z: 204.184814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1674065859}
@@ -4285,6 +4345,74 @@ MonoBehaviour:
   energy: 0
   lap: 0
   checkpoint: 0
+--- !u!120 &1870063527
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870063517}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 0
+--- !u!114 &1870063528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870063517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: One
+  energyCost: 1
+  bd: {fileID: 0}
+  avaible: 0
+--- !u!23 &1870063529
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870063517}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1001 &1935505633
 Prefab:
   m_ObjectHideFlags: 0
