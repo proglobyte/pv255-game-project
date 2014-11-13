@@ -20,9 +20,11 @@ public class NewStyleLaserHoverOne : MonoBehaviour {
 	}
 	
 	void Update (){
-		if ( ((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost)) {
-			avaible = true;
-		}
+		if (((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost)) {
+						avaible = true;
+				} else {
+			avaible=false;
+				}
 		if (Input.GetButton("Player" + player + "_Weapon2") && avaible==true)
 		{
 			StopCoroutine("FireLaser");

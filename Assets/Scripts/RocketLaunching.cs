@@ -27,6 +27,8 @@ public class RocketLaunching : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy < energyCost){avaible=false;}
+
 		if (avaible) {
 			if (Input.GetButton ("Fire" + player)) {
 				Fire();
@@ -36,6 +38,7 @@ public class RocketLaunching : MonoBehaviour {
 			if ( ((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost) && (Time.time >= nextRocket) ) {
 				avaible = true;
 			}
+
 		}
 
 	}

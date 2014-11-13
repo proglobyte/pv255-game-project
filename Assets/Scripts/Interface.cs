@@ -52,7 +52,15 @@ public class Interface : MonoBehaviour {
 		iconColor.a = 1;
 		GUI.color = iconColor;
 
+		if (!hovercraft.GetComponent<NewStyleLaserHoverOne>().avaible) {
+			iconColor.a = 0.3f;
+			GUI.color = iconColor;
+		}
+
 		GUI.DrawTexture (new Rect (Screen.width - iconSize * 3.2f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), laser);
+		iconColor.a = 1;
+		GUI.color = iconColor;
+
 		GUI.DrawTexture (new Rect (Screen.width - iconSize * 4.4f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), emp);
 
 		for (int i = 0; i < hovercraft.GetComponent<SimpleHovercraft>().maxEnergy / 10; i++) {
