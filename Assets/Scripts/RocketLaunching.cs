@@ -17,28 +17,34 @@ public class RocketLaunching : MonoBehaviour {
 	}
 
 	void Fire() {
-		nextRocket = Time.time + rocketFrequency;
-		var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
-		rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
-		rocketInstance.GetComponent<BasicRocket> ().target = target;
-		(this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy -= energyCost;
-		avaible = false;
-	}
+				nextRocket = Time.time + rocketFrequency;
+				var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
+				rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
+				rocketInstance.GetComponent<BasicRocket> ().target = target;
+				(this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy -= energyCost;
+				avaible = false;
 	
-	// Update is called once per frame
-	void Update () {
-		if((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy < energyCost){avaible=false;}
-
+				// colum for PLayer.js
+				(this.gameObject.GetComponent ("Player") as Player).energy -= energyCost;
+				//colum for player.js
+	}
+		// Update is called once per frame
+	void Update (		) {
+		//if((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy < energyCost){avaible=false;}
+		//add player.js
+		if((this.gameObject.GetComponent ("Player") as Player).energy < energyCost){avaible=false;}
 		if (avaible) {
 			if (Input.GetButton ("Fire" + player)) {
 				Fire();
 			}
 		}
 		else {
-			if ( ((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost) && (Time.time >= nextRocket) ) {
+			//if ( ((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost) && (Time.time >= nextRocket) ) {
+				//avaible = true;
+			//}
+			if (((this.gameObject.GetComponent ("Player") as Player).energy>=energyCost)&& (Time.time >= nextRocket) ){
 				avaible = true;
 			}
-
 		}
 
 	}

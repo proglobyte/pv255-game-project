@@ -64,11 +64,18 @@ public class Interface : MonoBehaviour {
 		GUI.DrawTexture (new Rect (Screen.width - iconSize * 4.4f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), emp);
 
 		for (int i = 0; i < hovercraft.GetComponent<SimpleHovercraft>().maxEnergy / 10; i++) {
+
 			if (hovercraft.GetComponent<SimpleHovercraft>().energy / 10 <= i)
 			{
 				iconColor.a = 0.3f;
 				GUI.color = iconColor;
 			}
+			//dodělal jsem zde pro playera
+			if((hovercraft.GetComponent("Player") as Player).energy /10 <=i){
+				iconColor.a = 0.3f;
+				GUI.color = iconColor;
+			}
+			//
 			GUI.Box (new Rect (Screen.width - iconSize * 1.4f -  (iconSize * 0.5f * i), Screen.height - iconSize * 2.2f + offset, iconSize*0.4f, iconSize*0.2f), GUIContent.none, energyStyle);
 		}
 		iconColor.a = 1;

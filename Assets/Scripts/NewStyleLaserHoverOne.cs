@@ -9,6 +9,8 @@ public class NewStyleLaserHoverOne : MonoBehaviour {
 	public int energyCost;
 	public GameObject bd;
 	public bool avaible;
+	private Player pl;
+
 	//Transform bd;
 	
 	// Use this for initialization
@@ -17,19 +19,25 @@ public class NewStyleLaserHoverOne : MonoBehaviour {
 		//r = gameObject.GetComponent<Rigidbody> ();
 		line.enabled = false;
 		avaible = false;
+		pl = this.GetComponent<Player>();
 	}
 	
 	void Update (){
-		if (((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost)) {
+		if (pl.energy >= energyCost) {
 						avaible = true;
 				} else {
 			avaible=false;
+				}
+		if (pl.energy > 10) {
+						print ("vetsi");
+				} else {
+			print("mensi");
 				}
 		if (Input.GetButton("Player" + player + "_Weapon2") && avaible==true)
 		{
 			StopCoroutine("FireLaser");
 			StartCoroutine("FireLaser");
-			
+
 		}
 	}
 	
@@ -37,9 +45,9 @@ public class NewStyleLaserHoverOne : MonoBehaviour {
 	// Update is called once per frame
 	IEnumerator FireLaser(){
 		line.enabled = true;
-		(this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy -= energyCost;
+		pl.energy -= energyCost;
 		while (Input.GetButton("Player" + player + "_Weapon2")) {
-			if(avaible==false ||(this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy <= 0 ){break;}
+			if(avaible==false ||pl.energy <= 0 ){break;}
 			
 			
 			Vector3 fwd = transform.forward;
