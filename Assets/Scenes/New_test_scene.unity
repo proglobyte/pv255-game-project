@@ -3455,7 +3455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70257a27a63398c49a60779ae0fd05bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bd: {fileID: 0}
 --- !u!120 &869028776
 LineRenderer:
   m_ObjectHideFlags: 0
