@@ -13,6 +13,8 @@ GameObject:
   - 26: {fileID: 2600000}
   - 114: {fileID: 11400000}
   - 136: {fileID: 13600000}
+  - 108: {fileID: 10800000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Energy
   m_TagString: Untagged
@@ -23,23 +25,6 @@ GameObject:
 --- !u!1002 &100001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!1 &100002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 108: {fileID: 10800000}
-  - 114: {fileID: 11400002}
-  m_Layer: 0
-  m_Name: Point light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -47,27 +32,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2083.40356, y: 17.9638748, z: 27.3251343}
+  m_LocalPosition: {x: 3473.75439, y: -178.463882, z: -2372.30396}
   m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
-  m_Children:
-  - {fileID: 400002}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1002 &400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.316162109, y: -12.7962017, z: -.868768692}
-  m_LocalScale: {x: 50, y: 50, z: 50}
-  m_Children: []
-  m_Father: {fileID: 400000}
-  m_RootOrder: 0
 --- !u!12 &1200000
 ParticleAnimator:
   m_ObjectHideFlags: 1
@@ -92,7 +64,7 @@ ParticleAnimator:
     rgba: 0
   worldRotationAxis: {x: 0, y: 0, z: 0}
   localRotationAxis: {x: 0, y: 0, z: 0}
-  sizeGrow: .100000001
+  sizeGrow: .200000003
   rndForce: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
   damping: 1
@@ -110,10 +82,10 @@ EllipsoidParticleEmitter:
   serializedVersion: 2
   m_Enabled: 1
   m_Emit: 1
-  minSize: 8
-  maxSize: 10
-  minEnergy: 5
-  maxEnergy: 10
+  minSize: 10
+  maxSize: 12
+  minEnergy: 7
+  maxEnergy: 12
   minEmission: 10
   maxEmission: 20
   worldVelocity: {x: 0, y: 0, z: 0}
@@ -156,7 +128,7 @@ ParticleRenderer:
   m_StretchParticles: 0
   m_LengthScale: 0
   m_VelocityScale: 0
-  m_MaxParticleSize: .788849711
+  m_MaxParticleSize: .800000012
   UV Animation:
     x Tile: 1
     y Tile: 1
@@ -169,13 +141,13 @@ Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: 0, g: .909803927, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 27.5
+  m_Range: 32.2400017
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -210,14 +182,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b60632f77cc19e45a5ebc41b49b403d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
-  resetTime: 0
+  energy: 2
+  resetTime: 500
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8053d960fd9cf2847be31105f62458ad, type: 3}
@@ -232,8 +204,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 26.6000004
-  m_Height: 142.300003
+  m_Radius: 31.4799995
+  m_Height: 184.199997
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
