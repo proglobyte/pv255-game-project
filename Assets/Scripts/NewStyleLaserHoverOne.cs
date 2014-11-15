@@ -29,9 +29,9 @@ public class NewStyleLaserHoverOne : MonoBehaviour {
 			avaible=false;
 				}
 		if (pl.energy > 10) {
-						print ("vetsi");
+						print ("vetsi"+player);
 				} else {
-			print("mensi");
+			print("mensi"+player);
 				}
 		if (Input.GetButton("Player" + player + "_Weapon2") && avaible==true)
 		{
