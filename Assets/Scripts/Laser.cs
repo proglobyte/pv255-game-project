@@ -32,7 +32,7 @@ public class Laser : MonoBehaviour {
       if(!player.canLaser){
         break;
       }
-
+			print("LASSSSSSSSSSSSSSSSSSS");
 
       Vector3 fwd = transform.forward;
 
