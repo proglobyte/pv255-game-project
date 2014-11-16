@@ -3,7 +3,7 @@
 var id : String;
 var maxEnergy : int = 10;
 var energy : int = 0;
-var lap : int = 0;
+var lap : int = 1;
 var checkpoint : int = 0;
 var requiredEnergyEmp : int = 5;
 var requiredEnergyMissile : int = 7;
@@ -12,7 +12,7 @@ var canEmp : boolean = false;
 var canMissile : boolean  = false;
 var canLaser : boolean = false;
 var power : int = 50;
-
+var win : int=0;
 function addEnergy(amount : int){
   energy += amount;
   if(energy > maxEnergy){
@@ -30,6 +30,10 @@ function addEnergy(amount : int){
   }
 }
 
+function addLap(amount : int){
+  lap += amount;
+  
+  }
 function removeEnergy(amount : int){
   if(amount > energy){
     energy = 0;
