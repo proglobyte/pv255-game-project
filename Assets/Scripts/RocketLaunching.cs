@@ -3,49 +3,33 @@ using System.Collections;
 
 public class RocketLaunching : MonoBehaviour {
 
-	public GameObject target;
-	public GameObject rocket;
-	public string player;
-	private float nextRocket = 0.0f;
-	private float rocketFrequency = 0.5f;
-	public int energyCost;
-	public bool avaible;
-	//public GameObject warmup;
-	// Use this for initialization
-	void Start () {
-		avaible = false;
-	}
+  public GameObject target;
+  public GameObject rocket;
+  private float nextRocket = 0.0f;
+  private float rocketFrequency = 0.5f;
+  private Player player;
+  //public GameObject warmup;
+  // Use this for initialization
+  void Start () {
+    player = GetComponent("Player") as Player;
+  }
 
-	void Fire() {
-				nextRocket = Time.time + rocketFrequency;
-				var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
-				rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
-				rocketInstance.GetComponent<BasicRocket> ().target = target;
-				(this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy -= energyCost;
-				avaible = false;
-	
-				// colum for PLayer.js
-				(this.gameObject.GetComponent ("Player") as Player).energy -= energyCost;
-				//colum for player.js
-	}
-		// Update is called once per frame
-	void Update (		) {
-		//if((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy < energyCost){avaible=false;}
-		//add player.js
-		if((this.gameObject.GetComponent ("Player") as Player).energy < energyCost){avaible=false;}
-		if (avaible) {
-			if (Input.GetButton ("Fire" + player)) {
-				Fire();
-			}
-		}
-		else {
-			//if ( ((this.gameObject.GetComponent ("SimpleHovercraft") as SimpleHovercraft).energy >= energyCost) && (Time.time >= nextRocket) ) {
-				//avaible = true;
-			//}
-			if (((this.gameObject.GetComponent ("Player") as Player).energy>=energyCost)&& (Time.time >= nextRocket) ){
-				avaible = true;
-			}
-		}
+  void Fire() {
+    if(player.canMissile){
+      nextRocket = Time.time + rocketFrequency;
+      var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
+      rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
+      rocketInstance.GetComponent<BasicRocket> ().target = target;
 
-	}
+      // colum for PLayer.js
+      player.shotMissile();
+      //colum for player.js
+    }
+  }
+  // Update is called once per frame
+  void Update () {
+    if (Input.GetButton ("Fire" + player.id)) {
+      Fire();
+    }
+  }
 }

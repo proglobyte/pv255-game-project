@@ -14,12 +14,12 @@ public class Energy : MonoBehaviour {
   void OnTriggerEnter(Collider other)
   {
     if (other.gameObject.tag.Equals ("Hovercraft")) {
-      (other.transform.parent.gameObject.GetComponent("SimpleHovercraft") as SimpleHovercraft).AddEnergy(this.energy);
-      (other.transform.parent.gameObject.GetComponent("Player") as Player).energy += energy;
+      Player player = other.transform.parent.gameObject.GetComponent("Player") as Player;
+      player.addEnergy(energy);
     }
     (this.GetComponent("Renderer") as ParticleRenderer).enabled = false;
     (this.GetComponent("Light") as Light).enabled = false;
-    (this.GetComponent("Collider") as Collider).enabled = true;
+    (this.GetComponent("Collider") as Collider).enabled = false;
     resetTimer = 0;
     reset = true;
   }

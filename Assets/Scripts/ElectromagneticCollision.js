@@ -3,7 +3,6 @@
 private var timeLeft : float;
 private var disabled : boolean;
 private var power : float;
-private var script : SimpleHovercraft;
 private var player : Player;
 
 var timeout : float = 5;
@@ -21,9 +20,8 @@ function OnTriggerEnter (col : Collider)
 {
   if(col.gameObject.tag != player.id && col.gameObject.name == "em_sphere" && !disabled){
     initialize();
-    script = GetComponent(SimpleHovercraft);
-    power = script.power;
-    script.power = 0;
+    power = player.power;
+    player.power = 0;
   }
 }
 
@@ -33,8 +31,7 @@ function Update () {
       timeLeft -= Time.deltaTime;
     }
     else{
-      script.power = power;
-      script = null;
+      player.power = power;
       power = 0;
       disabled = false;
     }

@@ -10,8 +10,7 @@ private var sphere : GameObject;
 private var player : Player;
 
 var speed : float = 20;
-var radius : float = 5;
-var requiredEnergy : int = 5;
+var radius : float = 75;
 
 function Start () {
   player = GetComponent(Player);
@@ -52,8 +51,8 @@ function Update () {
   }
 
   if (Input.GetButton("Player" + player.id + "_Weapon3")){
-    print ("player " + player.id + " is using electromagnetic pulse");
-    if (transform.Find("em_sphere") == null && player.energy >= requiredEnergy){
+    if (transform.Find("em_sphere") == null && player.canEmp){
+      print ("player " + player.id + " is using electromagnetic pulse");
       initialize();
       sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
       sphere.transform.parent = this.transform;
@@ -70,7 +69,7 @@ function Update () {
       scaleFactor = radius/(destroyTimeLeft/speed);
       fadeFactor = sphere.renderer.material.color.a/(fadeTimeLeft/speed);
       destroyCountdown = true;
-      player.energy -= requiredEnergy;
+      player.shotEmp();
     }
   }
 }

@@ -8133,9 +8133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1870063517}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
-  player: Two
-  energyCost: 30
-  avaible: 0
 --- !u!114 &1683353364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8147,10 +8144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 50
-  player: Two
-  energy: 0
-  maxEnergy: 100
   speed: 0
 --- !u!114 &1683353365
 MonoBehaviour:
@@ -8165,7 +8158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   radius: 75
-  requiredEnergy: 5
 --- !u!114 &1683353366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8202,9 +8194,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: Two
+  maxEnergy: 10
   energy: 0
   lap: 0
   checkpoint: 0
+  requiredEnergyEmp: 5
+  requiredEnergyMissile: 7
+  requiredEnergyLaser: 1
+  canEmp: 0
+  canMissile: 0
+  canLaser: 0
+  power: 50
 --- !u!114 &1683353369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8213,13 +8213,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1683353359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e2acc7a910e7564aa08c317de987f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: Two
-  energyCost: 1
-  bd: {fileID: 0}
-  avaible: 0
 --- !u!120 &1683353370
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -9072,9 +9068,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1683353359}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
-  player: One
-  energyCost: 30
-  avaible: 0
 --- !u!114 &1870063520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9086,10 +9079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 50
-  player: One
-  energy: 0
-  maxEnergy: 100
   speed: 0
 --- !u!75 &1870063521
 ConstantForce:
@@ -9130,7 +9119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   radius: 75
-  requiredEnergy: 5
 --- !u!114 &1870063524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9167,9 +9155,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: One
+  maxEnergy: 10
   energy: 0
   lap: 0
   checkpoint: 0
+  requiredEnergyEmp: 5
+  requiredEnergyMissile: 7
+  requiredEnergyLaser: 1
+  canEmp: 0
+  canMissile: 0
+  canLaser: 0
+  power: 50
 --- !u!120 &1870063527
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -9211,13 +9207,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1870063517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e2acc7a910e7564aa08c317de987f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: One
-  energyCost: 1
-  bd: {fileID: 0}
-  avaible: 0
 --- !u!1001 &1933357675
 Prefab:
   m_ObjectHideFlags: 0
