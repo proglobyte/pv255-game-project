@@ -24,7 +24,6 @@ public class SimpleHovercraft : MonoBehaviour {
       float force = Input.GetAxis("Vertical"+player.id) * player.power;
       rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
       float torqueForce = Input.GetAxis ("Horizontal" + player.id) * player.power * 4;
-      Debug.Log (torqueForce);
       rigidbody.AddTorque (this.transform.up * torqueForce);
       this.speed = Vector3.Distance (lastPosition, this.transform.position) * speedConstant;
       lastPosition = this.transform.position;

@@ -7936,7 +7936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2acc7a910e7564aa08c317de987f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: e62ed0627a04bc34eaa1080d4a0fae32, type: 3}
+  sound: {fileID: 8300000, guid: 1c0186c007a0e674cbf0a5bea78d1cef, type: 3}
 --- !u!120 &1683353370
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -8868,7 +8868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2acc7a910e7564aa08c317de987f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: e62ed0627a04bc34eaa1080d4a0fae32, type: 3}
+  sound: {fileID: 8300000, guid: 1c0186c007a0e674cbf0a5bea78d1cef, type: 3}
 --- !u!82 &1870063529
 AudioSource:
   m_ObjectHideFlags: 0

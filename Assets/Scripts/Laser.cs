@@ -19,6 +19,8 @@ public class Laser : MonoBehaviour {
     {
       StopCoroutine("FireLaser");
       StartCoroutine("FireLaser");
+      audio.PlayOneShot(sound);
+      print("shoting");
 
     }
   }
@@ -27,7 +29,6 @@ public class Laser : MonoBehaviour {
   IEnumerator FireLaser(){
     line.enabled = true;
     player.shotLaser();
-    audio.PlayOneShot(sound);
     while (Input.GetButton("Player" + player.id + "_Weapon2")) {
       if(!player.canLaser){
         break;
