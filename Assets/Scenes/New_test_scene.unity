@@ -4642,7 +4642,7 @@ GameObject:
   - 33: {fileID: 1223083249}
   - 23: {fileID: 1223083248}
   m_Layer: 0
-  m_Name: Box01
+  m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
