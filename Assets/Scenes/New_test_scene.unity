@@ -357,9 +357,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 101920522}
   - 33: {fileID: 101920526}
-  - 65: {fileID: 101920525}
   - 23: {fileID: 101920524}
   - 114: {fileID: 101920523}
+  - 135: {fileID: 101920525}
   m_Layer: 0
   m_Name: rightBackSuspension
   m_TagString: Hovercraft
@@ -374,7 +374,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101920521}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -5.63137054, z: -25}
+  m_LocalPosition: {x: 15, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1870063518}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
@@ -414,8 +414,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &101920525
-BoxCollider:
+--- !u!135 &101920525
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -424,7 +424,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &101920526
 MeshFilter:
@@ -3567,9 +3567,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 968076074}
   - 33: {fileID: 968076078}
-  - 65: {fileID: 968076077}
   - 23: {fileID: 968076076}
   - 114: {fileID: 968076075}
+  - 135: {fileID: 968076077}
   m_Layer: 0
   m_Name: rightFrontSuspension
   m_TagString: Hovercraft
@@ -3584,7 +3584,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 968076073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -5.63137054, z: 25}
+  m_LocalPosition: {x: 15, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1870063518}
@@ -3600,7 +3600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
@@ -3624,8 +3624,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &968076077
-BoxCollider:
+--- !u!135 &968076077
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3634,7 +3634,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &968076078
 MeshFilter:
@@ -3772,9 +3772,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1064090036}
   - 33: {fileID: 1064090040}
-  - 65: {fileID: 1064090039}
   - 23: {fileID: 1064090038}
   - 114: {fileID: 1064090037}
+  - 135: {fileID: 1064090039}
   m_Layer: 0
   m_Name: leftFrontSuspension
   m_TagString: Hovercraft
@@ -3789,7 +3789,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1064090035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -5.63137054, z: 25}
+  m_LocalPosition: {x: -15, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1870063518}
@@ -3805,7 +3805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
@@ -3829,8 +3829,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1064090039
-BoxCollider:
+--- !u!135 &1064090039
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3839,7 +3839,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1064090040
 MeshFilter:
@@ -4348,9 +4348,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281721165}
   - 33: {fileID: 1281721169}
-  - 65: {fileID: 1281721168}
   - 23: {fileID: 1281721167}
   - 114: {fileID: 1281721166}
+  - 135: {fileID: 1281721168}
   m_Layer: 0
   m_Name: leftBackSuspension
   m_TagString: Hovercraft
@@ -4365,7 +4365,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281721164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -5.63137054, z: -25}
+  m_LocalPosition: {x: -15, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1870063518}
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
@@ -4405,8 +4405,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1281721168
-BoxCollider:
+--- !u!135 &1281721168
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4415,7 +4415,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1281721169
 MeshFilter:
@@ -6286,9 +6286,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1567346611}
   - 33: {fileID: 1567346615}
-  - 65: {fileID: 1567346614}
   - 23: {fileID: 1567346613}
   - 114: {fileID: 1567346612}
+  - 135: {fileID: 1567346614}
   m_Layer: 0
   m_Name: leftBackSuspension
   m_TagString: Hovercraft
@@ -6303,7 +6303,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567346610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -5.63137054, z: -25}
+  m_LocalPosition: {x: -15, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1683353360}
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
@@ -6343,8 +6343,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1567346614
-BoxCollider:
+--- !u!135 &1567346614
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6353,7 +6353,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1567346615
 MeshFilter:
@@ -6940,9 +6940,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1697881020}
   - 33: {fileID: 1697881024}
-  - 65: {fileID: 1697881023}
   - 23: {fileID: 1697881022}
   - 114: {fileID: 1697881021}
+  - 135: {fileID: 1697881023}
   m_Layer: 0
   m_Name: rightFrontSuspension
   m_TagString: Hovercraft
@@ -6957,7 +6957,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1697881019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -5.63137054, z: 25}
+  m_LocalPosition: {x: 15, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1683353360}
@@ -6973,7 +6973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
@@ -6997,8 +6997,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1697881023
-BoxCollider:
+--- !u!135 &1697881023
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7007,7 +7007,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1697881024
 MeshFilter:
@@ -7932,9 +7932,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1990984219}
   - 33: {fileID: 1990984223}
-  - 65: {fileID: 1990984222}
   - 23: {fileID: 1990984221}
   - 114: {fileID: 1990984220}
+  - 135: {fileID: 1990984222}
   m_Layer: 0
   m_Name: leftFrontSuspension
   m_TagString: Hovercraft
@@ -7949,7 +7949,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1990984218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -5.63137054, z: 25}
+  m_LocalPosition: {x: -15, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1683353360}
@@ -7965,7 +7965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
@@ -7989,8 +7989,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &1990984222
-BoxCollider:
+--- !u!135 &1990984222
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7999,7 +7999,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1990984223
 MeshFilter:
@@ -8017,9 +8017,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2006111668}
   - 33: {fileID: 2006111672}
-  - 65: {fileID: 2006111671}
   - 23: {fileID: 2006111670}
   - 114: {fileID: 2006111669}
+  - 135: {fileID: 2006111671}
   m_Layer: 0
   m_Name: rightBackSuspension
   m_TagString: Hovercraft
@@ -8034,7 +8034,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2006111667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -5.63137054, z: -25}
+  m_LocalPosition: {x: 15, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1683353360}
@@ -8050,7 +8050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264274ee03a8c33428671f84764cd570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspensionRange: 15
+  suspensionRange: 20
   suspensionForce: 60
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
@@ -8074,8 +8074,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &2006111671
-BoxCollider:
+--- !u!135 &2006111671
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8084,7 +8084,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2006111672
 MeshFilter:
