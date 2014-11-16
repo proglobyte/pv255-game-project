@@ -8,6 +8,7 @@ public class RocketLaunching : MonoBehaviour {
   private float nextRocket = 0.0f;
   private float rocketFrequency = 0.5f;
   private Player player;
+  public AudioClip sound;
   //public GameObject warmup;
   // Use this for initialization
   void Start () {
@@ -20,10 +21,10 @@ public class RocketLaunching : MonoBehaviour {
       var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
       rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
       rocketInstance.GetComponent<BasicRocket> ().target = target;
+      rocketInstance.AddComponent("AudioSource");
 
-      // colum for PLayer.js
       player.shotMissile();
-      //colum for player.js
+      audio.PlayOneShot(sound);
     }
   }
   // Update is called once per frame

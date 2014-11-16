@@ -565,7 +565,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435270159}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &435270161
 Behaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +682,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 441854099}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!124 &441854102
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3789,6 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1870063517}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
+  sound: {fileID: 0}
 --- !u!114 &1683353364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3812,6 +3813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317b24b0088ed524b87bba6e380326be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
   speed: 20
   radius: 75
 --- !u!114 &1683353366
@@ -4333,6 +4335,7 @@ GameObject:
   - 23: {fileID: 1870063529}
   - 120: {fileID: 1870063527}
   - 114: {fileID: 1870063528}
+  - 82: {fileID: 1870063530}
   m_Layer: 0
   m_Name: HovercraftOne
   m_TagString: Hovercraft
@@ -4371,6 +4374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1683353359}
   rocket: {fileID: 100010, guid: 71b83d2d45390304687b6dbc30bd99e0, type: 2}
+  sound: {fileID: 8300000, guid: 891239c8754ab234f9991ce4b6c719a6, type: 3}
 --- !u!114 &1870063520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4420,6 +4424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317b24b0088ed524b87bba6e380326be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 30bc6b596cc9e6841a8e370490fb28ca, type: 3}
   speed: 20
   radius: 75
 --- !u!114 &1870063524
@@ -4508,7 +4513,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870063517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fbf340ed5d996e44b5a652549b53395, type: 3}
   m_Name: 
@@ -4533,6 +4538,64 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!82 &1870063530
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1870063517}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 5c031dcd04cbf0942afc28d23f28393a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1935505633
 Prefab:
   m_ObjectHideFlags: 0

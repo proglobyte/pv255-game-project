@@ -4,6 +4,7 @@ using System.Collections;
 public class Laser : MonoBehaviour {
   LineRenderer line;
   private Player player;
+  public AudioClip sound;
 
   // Use this for initialization
   void Start () {
@@ -26,6 +27,7 @@ public class Laser : MonoBehaviour {
   IEnumerator FireLaser(){
     line.enabled = true;
     player.shotLaser();
+    audio.PlayOneShot(sound);
     while (Input.GetButton("Player" + player.id + "_Weapon2")) {
       if(!player.canLaser){
         break;

@@ -11,6 +11,7 @@ public class BasicRocket : MonoBehaviour {
 	public float warmupForce;
 	public float movementForce;
 	public float rotationSpeed;
+        public AudioClip sound;
 	// Use this for initialization
 	void Start () {
 		if (target == null) {
@@ -29,6 +30,7 @@ public class BasicRocket : MonoBehaviour {
 		//this.transform.position = parent.transform.position + parent.transform.forward.normalized * 30f;
 		//Debug.Log (transform.position);
 		//Debug.Log (parent.transform.position);
+                this.sound = Resources.Load("missile_impact") as AudioClip;
 	}
 
 	void Destroy() {
@@ -52,6 +54,7 @@ public class BasicRocket : MonoBehaviour {
 		if (other.gameObject.Equals (target)) {
 						Debug.Log ("Hit!");
 
+                        audio.PlayOneShot(sound);
 			var targetPosition = other.transform.position;
 			var rocketPosition = this.transform.position;
 			var hitPositionOnTarget = other.transform.InverseTransformPoint(other.contacts[0].point);

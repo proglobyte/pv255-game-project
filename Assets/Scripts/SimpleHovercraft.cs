@@ -28,7 +28,14 @@ public class SimpleHovercraft : MonoBehaviour {
       rigidbody.AddTorque (this.transform.up * torqueForce);
       this.speed = Vector3.Distance (lastPosition, this.transform.position) * speedConstant;
       lastPosition = this.transform.position;
-    }
+
+      float volumeFromSpeed = speed;
+      if(volumeFromSpeed >= 20){
+        volumeFromSpeed = 20;
+      }
+
+      audio.volume = (volumeFromSpeed / 0.2f) / 100f;
+  }
 
   void Update() {
       if (Input.GetButton ("Reset"+player.id) && Time.time > nextReset ) {

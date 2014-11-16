@@ -8,6 +8,7 @@ private var scaleFactor : float;
 private var fadeFactor : float;
 private var sphere : GameObject;
 private var player : Player;
+public var sound : AudioClip;
 
 var speed : float = 20;
 var radius : float = 75;
@@ -70,6 +71,7 @@ function Update () {
       fadeFactor = sphere.renderer.material.color.a/(fadeTimeLeft/speed);
       destroyCountdown = true;
       player.shotEmp();
+      audio.PlayOneShot(sound);
     }
   }
 }

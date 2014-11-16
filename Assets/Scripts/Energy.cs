@@ -6,6 +6,7 @@ public class Energy : MonoBehaviour {
   private int resetTimer;
   public int resetTime;
   private bool reset = false;
+  public AudioClip sound;
   // Use this for initialization
   void Start () {
 
@@ -16,6 +17,7 @@ public class Energy : MonoBehaviour {
     if (other.gameObject.tag.Equals ("Hovercraft")) {
       Player player = other.transform.parent.gameObject.GetComponent("Player") as Player;
       player.addEnergy(energy);
+      audio.PlayOneShot(sound);
     }
     (this.GetComponent("Renderer") as ParticleRenderer).enabled = false;
     (this.GetComponent("Light") as Light).enabled = false;
