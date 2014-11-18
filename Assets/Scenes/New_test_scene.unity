@@ -7831,7 +7831,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: .200000003
   m_Drag: 1
-  m_AngularDrag: .800000012
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7923,7 +7923,7 @@ MonoBehaviour:
   canEmp: 0
   canMissile: 0
   canLaser: 0
-  power: 80
+  power: 100
   win: 0
 --- !u!114 &1683353369
 MonoBehaviour:
@@ -8756,7 +8756,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: .200000003
   m_Drag: 1
-  m_AngularDrag: .800000012
+  m_AngularDrag: 2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8822,7 +8822,7 @@ MonoBehaviour:
   canEmp: 0
   canMissile: 0
   canLaser: 0
-  power: 80
+  power: 100
   win: 0
 --- !u!120 &1870063527
 LineRenderer:
