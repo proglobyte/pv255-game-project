@@ -28,7 +28,7 @@ public class SimpleHovercraft : MonoBehaviour {
 		rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
 
 		//rotation on direction change
-		float torque = Input.GetAxis ("Horizontal" + player.id);
+		float torque = Input.GetAxis ("Horizontal" + player.id) * Mathf.Sign(force);
 		float torqueForce =  torque * player.power * 4;
 		if (torque != 0) {
 			if (Mathf.Abs(currentRotation) <= maxRotation) {
