@@ -2,50 +2,69 @@
 using System.Collections;
 
 public class SimpleHovercraft : MonoBehaviour {
+	Transform fan;
+	private Transform body;
+	private Player player;
+	private float nextReset = 0.0f;
+	private float resetFrequency = 0.5f;
+	public float speed;
+	private const float speedConstant = 8;
+	private Vector3 lastPosition;
 
-  Transform fan;
-  private Player player;
-  private float nextReset = 0.0f;
-  private float resetFrequency = 0.5f;
-  public float speed;
-  private const float speedConstant = 8;
+	private int rotationStep = 1;
+	public int maxRotation = 30;
+	private int currentRotation = 0;
 
-  private Vector3 lastPosition;
+	void Start () {
+		fan = transform.Find("Fan");
+		body = transform.Find ("hover");
+		lastPosition = this.transform.position;
+		player = GetComponent<Player>();
+	}
 
-  void Start () {
-      fan = transform.Find("Fan");
-      lastPosition = this.transform.position;
-      player = GetComponent<Player>();
-    }
+	void FixedUpdate () {
+		//thrusters
+		float force = Input.GetAxis("Vertical"+player.id) * player.power;
+		rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
 
-  void FixedUpdate () {
-      //float r = Input.GetAxis("Horizontal"+player.id) * -10;
-      //fan.localRotation = Quaternion.Euler(0,r,0);
-      float force = Input.GetAxis("Vertical"+player.id) * player.power;
-      rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
-      float torqueForce = Input.GetAxis ("Horizontal" + player.id) * player.power * 4;
-      rigidbody.AddTorque (this.transform.up * torqueForce);
-      this.speed = Vector3.Distance (lastPosition, this.transform.position) * speedConstant;
-      lastPosition = this.transform.position;
+		//rotation on direction change
+		float torque = Input.GetAxis ("Horizontal" + player.id);
+		float torqueForce =  torque * player.power * 4;
+		if (torque != 0) {
+			if (Mathf.Abs(currentRotation) <= maxRotation) {
+				currentRotation += (int)(Mathf.Sign(torque) * rotationStep);
+				body.Rotate (-Vector3.right * Mathf.Sign(torque) * rotationStep);
+			}
+				} else if (Mathf.Abs(currentRotation) > 0) {
+			body.Rotate (Vector3.right * Mathf.Sign(currentRotation) * rotationStep);
+			currentRotation += (int)(-Mathf.Sign(currentRotation) * rotationStep);
+		}
 
-      float volumeFromSpeed = speed;
-      if(volumeFromSpeed >= 20){
-        volumeFromSpeed = 20;
-      }
+		//changing direction
+		rigidbody.AddTorque (this.transform.up * torqueForce);
 
-      audio.volume = (volumeFromSpeed / 0.2f) / 100f;
-  }
+		//speed calculation
+		this.speed = Vector3.Distance (lastPosition, this.transform.position) * speedConstant;
+		lastPosition = this.transform.position;
 
-  void Update() {
-      if (Input.GetButton ("Reset"+player.id) && Time.time > nextReset ) {
-            nextReset = Time.time + resetFrequency;
-            var pos = this.transform.position;
-            pos.y += 50;
-            this.transform.position = pos;
-            var rot = this.transform.rotation;
-            rot.x = 0;
-            rot.z = 0;
-            this.transform.rotation = rot;
-          }
-    }
+		//sound
+		float volumeFromSpeed = speed;
+		if(volumeFromSpeed >= 20){
+			volumeFromSpeed = 20;
+		}
+		audio.volume = (volumeFromSpeed / 0.2f) / 100f;
+	}
+
+	void Update() {
+		if (Input.GetButton ("Reset"+player.id) && Time.time > nextReset ) {
+		    nextReset = Time.time + resetFrequency;
+		    var pos = this.transform.position;
+		    pos.y += 50;
+		    this.transform.position = pos;
+		    var rot = this.transform.rotation;
+		    rot.x = 0;
+		    rot.z = 0;
+		    this.transform.rotation = rot;
+		  }
+	}
 }
