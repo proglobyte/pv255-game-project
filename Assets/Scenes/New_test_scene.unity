@@ -15141,6 +15141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   speed: 0
   maxRotation: 30
 --- !u!114 &1683353365
@@ -16828,6 +16829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   speed: 0
   maxRotation: 30
 --- !u!75 &1870063521

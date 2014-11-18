@@ -14,6 +14,8 @@ public class SimpleHovercraft : MonoBehaviour {
 	private int rotationStep = 1;
 	public int maxRotation = 30;
 	private int currentRotation = 0;
+	private bool handlingLock = false;
+	private int back = 1;
 
 	void Start () {
 		fan = transform.Find("Fan");
@@ -28,12 +30,26 @@ public class SimpleHovercraft : MonoBehaviour {
 		rigidbody.AddForceAtPosition( fan.forward * force, fan.position );
 
 		//rotation on direction change
-		float torque = Input.GetAxis ("Horizontal" + player.id) * Mathf.Sign(force);
+
+		if (!handlingLock) {
+			if (Vector3.Dot (transform.position - lastPosition, transform.forward) < -0.1f)
+				back = -1;
+			else
+				back = 1;
+		}
+
+		var horizontalAxis = Input.GetAxis ("Horizontal" + player.id);
+		handlingLock = false;
+		if (horizontalAxis != 0 && speed > 15) {
+			if (!handlingLock)
+			handlingLock = true;
+		}
+		float torque = horizontalAxis * back;
 		float torqueForce =  torque * player.power * 4;
 		if (torque != 0) {
 			if (Mathf.Abs(currentRotation) <= maxRotation) {
-				currentRotation += (int)(Mathf.Sign(torque) * rotationStep);
-				body.Rotate (-Vector3.right * Mathf.Sign(torque) * rotationStep);
+				currentRotation += (int)(Mathf.Sign(torque) * rotationStep * back);
+				body.Rotate (-Vector3.right * Mathf.Sign(torque) * rotationStep * back);
 			}
 				} else if (Mathf.Abs(currentRotation) > 0) {
 			body.Rotate (Vector3.right * Mathf.Sign(currentRotation) * rotationStep);

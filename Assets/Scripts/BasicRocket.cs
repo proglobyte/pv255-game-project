@@ -54,9 +54,7 @@ public class BasicRocket : MonoBehaviour {
 		if (other.gameObject.Equals (target)) {
 						Debug.Log ("Hit!");
 
-                        audio.PlayOneShot(sound);
-			var targetPosition = other.transform.position;
-			var rocketPosition = this.transform.position;
+            audio.PlayOneShot(sound);
 			var hitPositionOnTarget = other.transform.InverseTransformPoint(other.contacts[0].point);
 			if (hitPositionOnTarget.x > 0) {
 				other.rigidbody.AddForceAtPosition(target.transform.right*100,hitPositionOnTarget);

@@ -9,23 +9,17 @@ public class HovercraftPhysics : MonoBehaviour {
 	private float hoverHeight;
 	private float jumpingPower;
 	private float landingPower;
-	private float steeringPower;
 	public Transform[] corners;
-	private float increment;
-	private float distance;
-	private Quaternion rotation;
 	private float forwardPower;
 	private float steerPower;
 	private float stabilizingPower;
 	public float speedUpdate;
-	private Vector3 lastPosition;
 
 	
 	private void FixedUpdate() {
 		if (!physicsSetup)
 			return;
 		RaycastHit hit = new RaycastHit();
-		var hitNormals = new Vector3[4];
 
 		for (int i = 0; i<corners.Length; i++) {
 			if (Physics.Raycast(corners[i].position, -corners[i].transform.up, out hit)) {
@@ -135,17 +129,10 @@ public class HovercraftPhysics : MonoBehaviour {
 		hoverHeight = 35;
 		jumpingPower = 10000;
 		landingPower = 5000;
-		steeringPower = 20000;
 		stabilizingPower = 60000;
-
 		corners = new Transform[4];
-
-		increment = 0;
-		distance = 0;
-		rotation = new Quaternion ();
 		forwardPower = 7500;
 		steerPower = 100;
-		lastPosition = transform.position;
 		Vector3[] cornerPoints;
 		cornerPoints = new Vector3[4];
 

@@ -5,7 +5,6 @@ public class RocketLaunching : MonoBehaviour {
 
   public GameObject target;
   public GameObject rocket;
-  private float nextRocket = 0.0f;
   private float rocketFrequency = 0.5f;
   private Player player;
   public AudioClip sound;
@@ -17,7 +16,6 @@ public class RocketLaunching : MonoBehaviour {
 
   void Fire() {
     if(player.canMissile){
-      nextRocket = Time.time + rocketFrequency;
       var rocketInstance = Instantiate (rocket, transform.position + transform.forward.normalized * 60f, transform.rotation) as GameObject;
       rocketInstance.GetComponent<BasicRocket> ().parent = this.gameObject;
       rocketInstance.GetComponent<BasicRocket> ().target = target;
