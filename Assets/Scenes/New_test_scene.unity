@@ -6089,7 +6089,6 @@ GameObject:
   - 33: {fileID: 869028774}
   - 23: {fileID: 869028773}
   - 120: {fileID: 869028776}
-  - 114: {fileID: 869028775}
   m_Layer: 0
   m_Name: Box001
   m_TagString: Untagged
@@ -6138,17 +6137,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1837025276}
   m_GameObject: {fileID: 869028771}
   m_Mesh: {fileID: 4300000, guid: 5d6b9cc9b6f9639499ca96aeead73738, type: 3}
---- !u!114 &869028775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 869028771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70257a27a63398c49a60779ae0fd05bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &869028776
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -15141,7 +15129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
   speed: 0
   maxRotation: 30
 --- !u!114 &1683353365
@@ -16829,7 +16816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311f9ff2f77669a49af06f2ada625111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
   speed: 0
   maxRotation: 30
 --- !u!75 &1870063521
