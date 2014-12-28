@@ -30,6 +30,10 @@ function addEnergy(amount : int){
   }
 }
 
+function isFull(){
+	return energy == maxEnergy;
+}
+
 function addLap(amount : int){
   lap += amount;
   

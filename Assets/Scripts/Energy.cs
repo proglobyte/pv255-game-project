@@ -16,14 +16,17 @@ public class Energy : MonoBehaviour {
   {
     if (other.gameObject.tag.Equals ("Hovercraft")) {
       Player player = other.transform.parent.gameObject.GetComponent("Player") as Player;
+	  if(player.isFull()){
+	    return;
+	  }
       player.addEnergy(energy);
       audio.PlayOneShot(sound);
+	  (this.GetComponent("Renderer") as ParticleRenderer).enabled = false;
+	  (this.GetComponent("Light") as Light).enabled = false;
+	  (this.GetComponent("Collider") as Collider).enabled = false;
+	  resetTimer = 0;
+	  reset = true;
     }
-    (this.GetComponent("Renderer") as ParticleRenderer).enabled = false;
-    (this.GetComponent("Light") as Light).enabled = false;
-    (this.GetComponent("Collider") as Collider).enabled = false;
-    resetTimer = 0;
-    reset = true;
   }
 
   // Update is called once per frame
