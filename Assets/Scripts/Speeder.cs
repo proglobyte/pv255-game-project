@@ -3,14 +3,12 @@ using System.Collections;
 
 public class Speeder : MonoBehaviour {
 
-	public float force;
+	public float force = 1800;
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag.Equals("Speeder"))
-		{
-			var rb = this.GetComponentInParent<Rigidbody>();
-			rb.AddForce(other.transform.forward * force);
+		if (other.tag.Equals ("Hovercraft")) {
+			other.attachedRigidbody.AddForce(this.transform.forward * force);
 		}
 	}
 }
