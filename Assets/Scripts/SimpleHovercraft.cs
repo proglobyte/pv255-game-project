@@ -39,10 +39,9 @@ public class SimpleHovercraft : MonoBehaviour {
 		}
 
 		var horizontalAxis = Input.GetAxis ("Horizontal" + player.id);
-		handlingLock = false;
-		if (horizontalAxis != 0 && speed > 15) {
-			if (!handlingLock)
-			handlingLock = true;
+		handlingLock = true;
+		if (force >= 0 || speed < 15) {
+			handlingLock = false;
 		}
 		float torque = horizontalAxis * back;
 		float torqueForce =  torque * player.power * 4;
