@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
 --- !u!23 &101920524
@@ -8055,7 +8055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
 --- !u!23 &968076076
@@ -9099,7 +9099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
 --- !u!23 &1064090038
@@ -10716,7 +10716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 1674065858}
 --- !u!23 &1281721167
@@ -14151,7 +14151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
 --- !u!23 &1567346613
@@ -15272,7 +15272,7 @@ ConstantForce:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683353359}
   m_Enabled: 1
-  m_Force: {x: 0, y: -40, z: 0}
+  m_Force: {x: 0, y: -80, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -15514,7 +15514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
 --- !u!23 &1697881022
@@ -16999,7 +16999,7 @@ ConstantForce:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870063517}
   m_Enabled: 1
-  m_Force: {x: 0, y: -40, z: 0}
+  m_Force: {x: 0, y: -80, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -17870,7 +17870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
 --- !u!23 &1990984221
@@ -17955,7 +17955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspensionRange: 20
-  suspensionForce: 60
+  suspensionForce: 90
   suspensionDamp: .200000003
   levelParent: {fileID: 335156472}
 --- !u!23 &2006111670
