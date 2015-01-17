@@ -1,0 +1,13 @@
+States:
+0. Inactive and empty (not interactive)
+1. Closed without key in inventory (interactive)
+2. Closed with key in inventory (interactive)
+3. Opened (not interactive - handled from item)
+
+Actions if clicked:
+1. -> 1. (Treasure is still closed, locked sound)
+2. -> 3. (Treasure opens, open sound)
+
+Other objects interaction:
+1. -> 2. (Key - Treasure unlockes)
+3. -> 0. (Sword - Treasure closes, close sound)
