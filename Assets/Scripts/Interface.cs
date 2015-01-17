@@ -33,7 +33,7 @@ public class Interface : MonoBehaviour {
     energyStyle.normal.background = energyRect;
 
     int size = Mathf.Min (Screen.height, Screen.width);
-    iconSize = size / 13;
+		iconSize = size / 13;
   }
 
   void OnGUI()
@@ -73,6 +73,9 @@ public class Interface : MonoBehaviour {
       GUI.color = iconColor;
     }
     GUI.DrawTexture (new Rect (Screen.width - iconSize * 4.4f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), emp);
+		/////	DELETE
+		if(player.energy>0)
+			player.win = 1;
 
     for (int i = 0; i < player.maxEnergy; i++) {
       iconColor.a = 1;
@@ -93,7 +96,8 @@ public class Interface : MonoBehaviour {
 
     if (player.win == 1) {
       GUI.Box(new Rect(Screen.width - iconSize * 4, Screen.height - iconSize * 6.4f + offset, iconSize *3, iconSize *4), 
-          "WIN", speedStyle2);
+          "won", speedStyle2);
+	  GameObject.Find("EndMenu").GetComponent<End>().show(player.id);
     }else{
       GUI.Box(new Rect(Screen.width - iconSize * 4, Screen.height - iconSize * 6.4f + offset, iconSize *3, iconSize *4), 
           player.lap.ToString()+"/3", speedStyle2);
