@@ -14,6 +14,10 @@ public class End : MonoBehaviour {
 		showed = true;
 	}
 
+	void Awake()
+	{
+		Time.timeScale = 1.0f;
+	}
 
 	void OnGUI () {
 		if (!showed)

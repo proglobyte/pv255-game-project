@@ -19028,8 +19028,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1995540515}
-  - 114: {fileID: 1995540517}
-  - 114: {fileID: 1995540516}
   - 114: {fileID: 1995540518}
   m_Layer: 0
   m_Name: EndMenu
@@ -19050,31 +19048,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 126694533}
   m_RootOrder: 3
---- !u!114 &1995540516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1995540514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a55c8b2600ed48bb9d37f7175f5ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showed: 0
-  lastPressed: 0
-  player: 
---- !u!114 &1995540517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1995540514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07bf1d5fe5ac9a4eb9645841427e7ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1995540518
 MonoBehaviour:
   m_ObjectHideFlags: 0
