@@ -9,9 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
   - enabled: 0
     path: Assets/Scenes/New_test_scene.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/menu.unity
   - enabled: 1
     path: Assets/Scenes/game.unity
-  - enabled: 1
-    path: Assets/Scenes/mainMenu.unity
