@@ -74,11 +74,11 @@ public class Interface : MonoBehaviour {
     }
     GUI.DrawTexture (new Rect (Screen.width - iconSize * 4.4f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), emp);
 
-    for (int i = 0; i < player.maxEnergy; i++) {
+    for (int i = 0; i < player.maxEnergy/10; i++) {
       iconColor.a = 1;
       GUI.color = iconColor;
       //dodělal jsem zde pro playera
-      if(player.energy <= i){
+      if(player.energy <= i*10){
         iconColor.a = 0.3f;
         GUI.color = iconColor;
       }

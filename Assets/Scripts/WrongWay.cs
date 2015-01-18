@@ -43,13 +43,13 @@ public class WrongWay : MonoBehaviour {
 		style.normal.textColor = new Color (0.9f, 0.9f, 0.9f); 
 
 		if (show1) {
-				var dim = style.CalcSize (new GUIContent ("Wrong way!"));
-				GUI.Label (new Rect (Screen.width / 8, 5*Screen.height / 8, dim.x, dim.y), "Wrong way!", style);
+			var dim = style.CalcSize (new GUIContent ("Wrong way!"));
+			GUI.Label (new Rect (Screen.width / 8, Screen.height / 8, dim.x, dim.y), "Wrong way!", style);
 		}
 
 		if (show2) {
 				var dim = style.CalcSize (new GUIContent ("Wrong way!"));
-				GUI.Label (new Rect (Screen.width / 8, Screen.height / 8, dim.x, dim.y), "Wrong way!", style);
+				GUI.Label (new Rect (Screen.width / 8, 5*Screen.height / 8, dim.x, dim.y), "Wrong way!", style);
 		}
 	}
 }
