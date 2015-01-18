@@ -13,6 +13,8 @@ var canMissile : boolean  = false;
 var canLaser : boolean = false;
 var power : int = 50;
 var win : int=0;
+var checkpointObject : GameObject;
+var temporaryCheckpointObject : GameObject;
 function addEnergy(amount : int){
   energy += amount;
   if(energy > maxEnergy){

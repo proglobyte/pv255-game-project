@@ -73,9 +73,6 @@ public class Interface : MonoBehaviour {
       GUI.color = iconColor;
     }
     GUI.DrawTexture (new Rect (Screen.width - iconSize * 4.4f, Screen.height - iconSize * 1.5f + offset, iconSize, iconSize), emp);
-		/////	DELETE
-		if(player.energy>0)
-			player.win = 1;
 
     for (int i = 0; i < player.maxEnergy; i++) {
       iconColor.a = 1;
